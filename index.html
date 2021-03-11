@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Co mpatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Neucha&display=swap" rel="stylesheet">
+    
+    <title>МЭТЧ</title>
+</head>
+<body>
+    <div id="SPA"></div>
+
+    <script defer src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+    <script defer src="https://www.gstatic.com/firebasejs/8.2.10/firebase-database.js"></script>
+    <script defer src="js/firebase.js"></script>
+    <script defer src="js/mainLinks.js"></script>
+    <script defer src="js/menuLinks.js"></script>
+    <script defer src="js/start.js"></script>
+    <script defer src="js/menu.js"></script>
+    <script defer src="js/main.js"></script>
+    <script defer src="js/bestResult.js"></script>
+    <script defer src="js/sound.js"></script>
+    <script defer src="js/index.js"></script>
+    <script >
+        window.onbeforeunload = function() {//подтверждение при закрытии вкладки или обновлении
+            return 'Данные будут потеряны';
+        };
+    </script>
+</body>
+</html>
