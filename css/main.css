@@ -1,0 +1,248 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Neucha', cursive; }
+
+body {
+  background: url(../img/table.jpg);
+  background-size: 100% 100%;
+  height: 100vh;
+  overflow: hidden; }
+
+ul {
+  margin: 0;
+  padding: 0; }
+  ul li {
+    list-style-type: none; }
+
+button {
+  background-color: wheat;
+  border: none;
+  border-radius: 15px;
+  outline: 0;
+  cursor: pointer; }
+
+button:hover {
+  background-color: #f8d696; }
+
+.game {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px; }
+
+#board {
+  border-collapse: collapse;
+  border: 0px solid transparent; }
+  #board tr td {
+    position: relative; }
+
+#step {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around; }
+
+#timeCount {
+  width: 310px; }
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around; }
+  .buttons button {
+    margin-left: 20px;
+    height: 40px;
+    width: 127px; }
+  .buttons span {
+    font-size: 30px;
+    vertical-align: middle; }
+
+#flipBtns, #matchAndBtn {
+  display: flex; }
+
+#flip, #match {
+  border: 1px solid black;
+  border-radius: 5px;
+  position: relative; }
+
+svg {
+  border: 2px solid black;
+  border-radius: 5px;
+  transition-duration: 0.35s;
+  transition-timing-function: linear;
+  transition-property: top, left, transform;
+  position: absolute;
+  top: 0px;
+  left: 0px; }
+
+#closeSave {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  background-color: wheat;
+  text-align: center;
+  padding-top: 5px;
+  cursor: pointer; }
+
+#closeSave:hover {
+  background-color: #f8d696; }
+
+.closed {
+  display: none; }
+
+.container {
+  position: relative;
+  text-align: left;
+  padding: 30px;
+  width: 500px;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 200px;
+  background-color: wheat;
+  border-radius: 20px;
+  text-align: center;
+  padding: 30px; }
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5); }
+  .modal h1 {
+    padding-bottom: 35px; }
+  .modal label, .modal [type="text"] {
+    font-size: 20px; }
+  .modal .modalFooter {
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    font-size: 20px;
+    margin-left: 15px; }
+    .modal .modalFooter button:hover {
+      background-color: wheat;
+      text-decoration: underline; }
+
+[type="text"], input {
+  border-radius: 20px;
+  height: 35px;
+  padding-left: 10px;
+  outline: 0;
+  border-color: #f8d696; }
+
+.menu {
+  display: flex;
+  justify-content: space-around;
+  transition-duration: 1s;
+  position: relative; }
+  .menu #modalMenuContainer {
+    height: 500px;
+    margin-top: 0px;
+    transition-duration: 1s;
+    position: relative;
+    top: 2500px; }
+    .menu #modalMenuContainer h1 {
+      font-size: 35px;
+      padding-bottom: 0px; }
+    .menu #modalMenuContainer li {
+      margin-bottom: 20px;
+      background-color: #f8d696;
+      padding: 5px;
+      width: 170px;
+      height: 50px;
+      border-radius: 10px;
+      margin-left: auto;
+      margin-right: auto; }
+    .menu #modalMenuContainer button {
+      background-color: #f8d696;
+      font-size: 20px;
+      width: 150px;
+      height: 40px; }
+    .menu #modalMenuContainer button:hover {
+      border: 2px black dashed; }
+  .menu #modalContent {
+    height: 85vh;
+    width: 60vw;
+    margin-top: 80px;
+    text-align: left;
+    transition-duration: 1s;
+    position: fixed;
+    right: -1800px; }
+    .menu #modalContent button {
+      background-color: #f8d696;
+      font-size: 20px;
+      width: 150px;
+      height: 40px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 20px; }
+    .menu #modalContent button:hover {
+      border: 2px black dashed; }
+    .menu #modalContent h1 {
+      text-align: center; }
+    .menu #modalContent .animRules {
+      display: flex;
+      justify-content: space-around;
+      position: relative; }
+      .menu #modalContent .animRules svg {
+        border: none;
+        position: relative; }
+      .menu #modalContent .animRules h1 {
+        position: absolute;
+        top: 20px;
+        font-size: 40px;
+        font-weight: bolder; }
+      .menu #modalContent .animRules h1:first-of-type {
+        color: green;
+        left: 39%; }
+      .menu #modalContent .animRules h1:last-of-type {
+        color: red;
+        right: 5%; }
+
+#bestRes {
+  width: 70%;
+  height: 81%;
+  position: relative;
+  top: 2500px;
+  margin-top: 0px;
+  transition-duration: 1s; }
+  #bestRes .btn {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 5px;
+    border-radius: 15px;
+    background-color: #f8d696;
+    width: 210px;
+    height: 50px; }
+    #bestRes .btn button {
+      background-color: #f8d696;
+      font-size: 20px;
+      width: 200px;
+      height: 40px; }
+    #bestRes .btn button:hover {
+      border: 2px black dashed; }
+
+#bestRes ol, #showBestResult ol {
+  line-height: 1.5; }
+  #bestRes ol li, #showBestResult ol li {
+    text-align: left;
+    padding-left: 10px;
+    padding-right: 20px;
+    font-size: 25px; }
+    #bestRes ol li strong, #showBestResult ol li strong {
+      float: right; }
+
+#showBestResult {
+  width: 100%;
+  font-size: 25px;
+  border-collapse: collapse; }
+  #showBestResult th {
+    text-align: center; }
+  #showBestResult td {
+    border: 1px solid black; }
+
+/*# sourceMappingURL=main.css.map */

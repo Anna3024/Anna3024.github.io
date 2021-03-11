@@ -1,0 +1,293 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Neucha', cursive;
+}
+body {
+    background: url(../img/table.jpg) ;
+    background-size: 100% 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+ul{
+    margin: 0;
+    padding: 0;
+    li {
+        list-style-type: none;
+    }
+}
+button {
+    background-color: wheat;
+    border: none;
+    border-radius: 15px;
+    outline: 0;
+    cursor: pointer;
+}
+button:hover {
+    background-color: rgb(248, 214, 150);
+}
+.game {
+    display: flex;
+    justify-content: space-around;
+    // margin: 10px;
+    padding: 10px;
+}
+#board {
+    border-collapse: collapse;
+    border: 0px solid transparent;
+    tr {
+        // height: 175px;
+        td {
+            // width: 135px;
+            position: relative;
+        }
+    }
+}
+#step {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+#timeCount {
+    width: 310px;
+}
+.buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    button {
+        margin-left: 20px;
+        // margin-top: 5px;
+        height: 40px; 
+        width: 127px;
+    }
+    span {
+        font-size: 30px;
+        vertical-align: middle;
+    }
+}
+#flipBtns,  #matchAndBtn{
+    display: flex;
+}
+#flip , #match {
+    // width: 130px;
+    // height: 170px;
+    border: 1px solid black;
+    border-radius: 5px;
+    position: relative;
+}
+svg {
+    border: 2px solid black;
+    border-radius: 5px;
+    transition-duration: 0.35s;
+    transition-timing-function: linear;
+    transition-property: top, left, transform;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+#closeSave {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: wheat;
+    text-align: center;
+    padding-top: 5px;
+    cursor: pointer;
+
+}
+#closeSave:hover {
+    background-color: rgb(248, 214, 150);
+}
+
+.closed {
+    display: none;
+}
+
+.container{
+    position: relative;
+    text-align: left;
+    padding: 30px;
+    width: 500px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 200px;
+    background-color: wheat;
+    border-radius: 20px;
+    text-align: center;
+    padding: 30px;
+}
+.modal {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.5);
+    h1 {
+        padding-bottom: 35px;
+    }
+    label , [type="text"] {
+        font-size: 20px;
+    }
+
+    .modalFooter {
+        position: absolute;
+        right: 30px;
+        bottom: 30px;
+        font-size: 20px;
+        margin-left: 15px;
+        button:hover {
+            background-color: wheat;
+            text-decoration: underline;
+        }
+    }
+}
+[type="text"], input {
+    border-radius: 20px;
+    height: 35px;
+    padding-left: 10px;
+    outline: 0;
+    border-color: rgb(248, 214, 150);
+}
+.menu {
+    display: flex;
+    justify-content: space-around;
+    transition-duration: 1s;
+    position: relative;
+    #modalMenuContainer {
+        height: 500px;
+        margin-top: 0px;
+        transition-duration: 1s;
+        position: relative;
+        top: 2500px;
+        h1 {
+            font-size: 35px;
+            padding-bottom: 0px;
+        }
+        li {
+            margin-bottom: 20px;
+            background-color: rgb(248, 214, 150);
+            padding: 5px;
+            width: 170px;
+            height: 50px;
+            border-radius: 10px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        button {
+            background-color: rgb(248, 214, 150);
+            font-size: 20px;
+            width: 150px;
+            height: 40px;
+        }
+        button:hover {
+            border: 2px black dashed;
+        }
+    }
+    #modalContent {
+        height: 85vh;
+        width: 60vw;
+        margin-top: 80px;
+        text-align: left;
+        transition-duration: 1s;
+        position: fixed;
+        right: -1800px ;
+        button {
+            background-color: rgb(248, 214, 150);
+            font-size: 20px;
+            width: 150px;
+            height: 40px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 20px;
+        }
+        button:hover {
+            border: 2px black dashed;
+        }
+        h1 {
+            text-align: center;
+        }
+        .animRules {
+            display: flex;
+            justify-content: space-around;
+            position: relative;
+            svg {
+                border: none;
+                position: relative;
+            }
+            h1 {
+                position: absolute;
+                top: 20px;
+                font-size: 40px;
+                font-weight: bolder;
+            }
+            h1:first-of-type {
+                color: green;
+                left: 39%;
+            }
+            h1:last-of-type {
+                color: red;
+                right: 5%;
+            }
+        }
+    }
+}
+#bestRes {
+    width: 70%;
+    height: 81%;
+    position: relative;
+    // top: 50px;
+    top: 2500px;
+    margin-top: 0px;
+    transition-duration: 1s;
+    .btn {
+        margin-left: auto;
+        margin-right: auto;
+        padding: 5px;
+        border-radius: 15px;
+        background-color: rgb(248, 214, 150);
+        width: 210px;
+        height: 50px;
+        button {
+            background-color: rgb(248, 214, 150);
+            font-size: 20px;
+            width: 200px;
+            height: 40px;
+        }
+        button:hover {
+            border: 2px black dashed;
+        }
+    }
+    
+}
+#bestRes, #showBestResult {
+    ol {
+        line-height: 1.5;
+        li {
+            text-align: left;
+            padding-left: 10px;
+            padding-right: 20px;
+            font-size: 25px;
+            strong {
+                float: right;
+            }
+        }
+    }
+}
+
+#showBestResult {
+    width: 100%;
+    font-size: 25px;
+    border-collapse: collapse;
+    th {
+        text-align: center;
+    }
+    td {
+        border: 1px solid black;
+    }
+}
